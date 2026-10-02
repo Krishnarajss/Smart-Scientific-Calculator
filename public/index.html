@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        
+        <!-- Iteration 5: start5 -->
+        <div class="display-screen">
+            <div id="history" class="history-text"></div>
+            <div id="display" class="current-output">0</div>
+        </div>
+        <!-- Iteration 5: end5 -->
+
+        <div class="keypad">
+            
+            <!-- Iteration 1: start1 -->
+            <button class="btn function" onclick="calculatorUI.clearDisplay()">AC</button>
+            <button class="btn function" onclick="calculatorUI.deleteInput()">DEL</button>
+            <button class="btn operator" onclick="calculatorUI.selectOperation('%')">%</button>
+            <button class="btn operator" onclick="calculatorUI.selectOperation('/')">÷</button>
+
+            <button class="btn number" onclick="calculatorUI.enterInput('7')">7</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('8')">8</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('9')">9</button>
+            <button class="btn operator" onclick="calculatorUI.selectOperation('*')">×</button>
+
+            <button class="btn number" onclick="calculatorUI.enterInput('4')">4</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('5')">5</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('6')">6</button>
+            <button class="btn operator" onclick="calculatorUI.selectOperation('-')">-</button>
+
+            <button class="btn number" onclick="calculatorUI.enterInput('1')">1</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('2')">2</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('3')">3</button>
+            <button class="btn operator" onclick="calculatorUI.selectOperation('+')">+</button>
+
+            <button class="btn number" onclick="calculatorUI.enterInput('0')" style="grid-column: span 2;">0</button>
+            <button class="btn number" onclick="calculatorUI.enterInput('.')">.</button>
+            <button class="btn equals" onclick="calculatorUI.displayResult()">=</button>
+            <!-- Iteration 1: end1 -->
+
+            <!-- Iteration 2 & 3: start2_3 -->
+            <button class="btn sci" onclick="calculatorUI.applyScientific('sqrt')">√</button>
+            <button class="btn sci" onclick="calculatorUI.applyScientific('pow')">x^y</button>
+            <button class="btn sci" onclick="calculatorUI.applyScientific('sin')">sin</button>
+            <button class="btn sci" onclick="calculatorUI.applyScientific('cos')">cos</button>
+            <!-- Iteration 2 & 3: end2_3 -->
+
+            <!-- Iteration 6: start6 -->
+            <button class="btn function" onclick="calculatorUI.toggleHistory()" style="grid-column: span 4;">View Database History</button>
+            <!-- Iteration 6: end6 -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
